@@ -20,6 +20,8 @@ public class StarPattern
         }
     }
 
+    
+
     public void InvertedRightTriangleStar()
     {
         for (int i = 0; i < 5; i++)
@@ -34,6 +36,74 @@ public class StarPattern
         
     }
 
+    
+    //     *
+    //    ***
+    //   *****
+    //  *******
+    // *********
+    public void PyramidStar()
+    {
+        for (int i = 0; i <5 ; i++)
+        {
+            for (int j = i; j < 4; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 0; j <2*i+1 ; j++)
+            {
+                Console.Write("*");
+            }
+            
+         
+            Console.WriteLine("");
+            
+        }
+        
+    }
+    
+    
+    
+    
+    //      *
+    //     * *
+    //    *   *
+    //   *     *
+    //  * * * * *
+
+    public void HollowPyramidStarPattern()
+    {
+        int height = 5;
+
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = i; j < height - 1; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 0; j < 2 * i + 1; j++)
+            {
+                if (i == height - 1) 
+                {
+                    if (j % 2 == 0)
+                        Console.Write("*");
+                    else
+                        Console.Write(" ");
+                }
+                else 
+                {
+                    if (j == 0 || j == 2 * i)
+                        Console.Write("*");
+                    else
+                        Console.Write(" ");
+                }
+            }
+
+            Console.WriteLine();
+        }
+    }
 
 
     public class MainClass
@@ -42,7 +112,7 @@ public class StarPattern
         public static void Main(string[] args)
         {
            StarPattern starPattern= new StarPattern();
-           starPattern.InvertedRightTriangleStar();
+           starPattern.HollowPyramidStarPattern();
            
         }
         

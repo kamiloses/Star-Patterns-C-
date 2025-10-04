@@ -2,7 +2,6 @@
 
 public class StarPattern
 {
-
 // *
 // **
 // ***
@@ -10,17 +9,17 @@ public class StarPattern
 // *****
     public void RightTriangleStar()
     {
-        for (int i = 0; i <5; i++)
+        for (int i = 0; i < 5; i++)
         {
-            for (int j = 0 ; j< i+1; j++)
+            for (int j = 0; j < i + 1; j++)
             {
                 Console.Write("*");
             }
+
             Console.WriteLine("");
         }
     }
 
-    
 
     public void InvertedRightTriangleStar()
     {
@@ -29,14 +28,13 @@ public class StarPattern
             for (int j = i; j < 5; j++)
             {
                 Console.Write("*");
-                
             }
+
             Console.WriteLine("");
         }
-        
     }
 
-    
+
     //     *
     //    ***
     //   *****
@@ -44,28 +42,24 @@ public class StarPattern
     // *********
     public void PyramidStar()
     {
-        for (int i = 0; i <5 ; i++)
+        for (int i = 0; i < 5; i++)
         {
             for (int j = i; j < 4; j++)
             {
                 Console.Write(" ");
             }
 
-            for (int j = 0; j <2*i+1 ; j++)
+            for (int j = 0; j < 2 * i + 1; j++)
             {
                 Console.Write("*");
             }
-            
-         
+
+
             Console.WriteLine("");
-            
         }
-        
     }
-    
-    
-    
-    
+
+
     //      *
     //     * *
     //    *   *
@@ -85,14 +79,14 @@ public class StarPattern
 
             for (int j = 0; j < 2 * i + 1; j++)
             {
-                if (i == height - 1) 
+                if (i == height - 1)
                 {
                     if (j % 2 == 0)
                         Console.Write("*");
                     else
                         Console.Write(" ");
                 }
-                else 
+                else
                 {
                     if (j == 0 || j == 2 * i)
                         Console.Write("*");
@@ -104,8 +98,8 @@ public class StarPattern
             Console.WriteLine();
         }
     }
-    
-    
+
+
 //     *
 //    ***
 //   *****
@@ -126,12 +120,14 @@ public class StarPattern
             {
                 Console.Write(" ");
             }
-            
-            for (int j = 0; j < i*2+1; j++)
+
+            for (int j = 0; j < i * 2 + 1; j++)
             {
                 Console.Write("*");
             }
-            Console.WriteLine(""); }
+
+            Console.WriteLine("");
+        }
 
         for (int i = 0; i < height; i++)
         {
@@ -140,36 +136,89 @@ public class StarPattern
                 Console.Write(" ");
             }
 
-            for (int j = i*2+1; j <=7; j++)
+            for (int j = i * 2 + 1; j <= 7; j++)
             {
                 Console.Write("*");
-
             }
 
             Console.WriteLine("");
         }
     }
 
-    
-    //8.Rhombus Star Pattern:
-    
-    
+    //     *****
+    //    *****
+    //   *****
+    //  *****
+    // *****
+    // //8.Rhombus Star Pattern:
+    public void RhombusStarPattern()
+    {
+        int height = 5;
+        int spaceWidth = 4;
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = i; j < spaceWidth; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 0; j < 5; j++)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine("");
+        }
+        //Hollow Rhombus Star Pattern:
+        //               *****
+        //              *   *
+        //             *   *
+        //             *   *
+        //            *****
+    }
+
+    public void HollowRhombusStarPattern()
+    {
+        int height = 5;
+        int spaceWidth = 4;
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = i; j < spaceWidth; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 0; j < 5; j++)
+            {
+                if (i == 0 || i == 4)
+                {
+                    Console.Write("*");
+                }
+                else
+                {
+                    if (j==1||j==4)
+                    {
+                        Console.Write("*");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+               
+            }
+
+            Console.WriteLine("");
+        }
+    }
 
 
     public class MainClass
     {
-
         public static void Main(string[] args)
         {
-           StarPattern starPattern= new StarPattern();
-           starPattern.FullPyramidStarPattern();
-
+            StarPattern starPattern = new StarPattern();
+            starPattern.HollowRhombusStarPattern();
         }
-        
     }
-    
-    
-    
-    
-    
 }

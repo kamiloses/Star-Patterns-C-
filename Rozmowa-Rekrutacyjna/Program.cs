@@ -104,6 +104,56 @@ public class StarPattern
             Console.WriteLine();
         }
     }
+    
+    
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+//  *******
+//   *****
+//    ***
+//     *    
+
+    public void FullPyramidStarPattern()
+    {
+        int height = 5;
+        int spaceWidth = 4;
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = i; j < spaceWidth; j++)
+            {
+                Console.Write(" ");
+            }
+            
+            for (int j = 0; j < i*2+1; j++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine(""); }
+
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = 0; j < i + 1; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = i*2+1; j <=7; j++)
+            {
+                Console.Write("*");
+
+            }
+
+            Console.WriteLine("");
+        }
+    }
+
+    
+    //8.Rhombus Star Pattern:
+    
+    
 
 
     public class MainClass
@@ -112,11 +162,14 @@ public class StarPattern
         public static void Main(string[] args)
         {
            StarPattern starPattern= new StarPattern();
-           starPattern.HollowPyramidStarPattern();
-           
+           starPattern.FullPyramidStarPattern();
+
         }
         
     }
+    
+    
+    
     
     
 }
